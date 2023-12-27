@@ -9,6 +9,7 @@ if sys.argv[-1].startswith(PREFIX_VERSION):
     sys.argv.pop()
 else:
     version = DEFAULT_VERSION
+
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
@@ -17,14 +18,14 @@ setuptools.setup(
     version=version,
     author="Athish NS",
     maintainer="Athish",
-    description="Stock Indicators for Python.  Send in historical price quotes and get back desired technical indicators such as Stochastic RSI, Average True Range, Parabolic SAR, etc.  Nothing more.",
+    description="Stock Indicators for Python. Send in historical price quotes and get back desired technical indicators such as Stochastic RSI, Average True Range, Parabolic SAR, etc.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/Athish-1",
+    url="https://github.com/Athish-1/stock-indicators",
     project_urls={
-        "Bug Tracker": "https://github.com/Athish-1",
-        "Documentation": "https://github.com/Athish-1",
-        "Source Code": "https://github.com/Athish-1",
+        "Bug Tracker": "https://github.com/Athish-1/stock-indicators/issues",
+        "Documentation": "https://your-documentation-url.com",  # Replace with the actual documentation URL
+        "Source Code": "https://github.com/Athish-1/stock-indicators",
     },
     license="Apache 2.0",
     classifiers=[
@@ -36,8 +37,6 @@ setuptools.setup(
         "License :: OSI Approved :: Apache Software License",
         "Operating System :: OS Independent",
     ],
-    platforms=["Windows", "Linux"],
-    package_dir={"": "."},
     packages=setuptools.find_packages(
         exclude=(
             'tests',
